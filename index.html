@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Health Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Health Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#patientData">Patient Data</a></li>
+                <li><a href="#reminders">Reminders</a></li>
+                <li><a href="#medicines">Medicines</a></li>
+                <li><a href="#communication">Communication</a></li>
+                <li><a href="#virtualAssistant">Virtual Assistant</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Patient Data Section -->
+        <section id="patientData">
+            <h2>Patient Data</h2>
+            <form id="patientForm">
+                <input type="text" placeholder="Enter Patient Name" id="patientName" required>
+                <input type="date" id="dob" required>
+                <input type="text" placeholder="Medical History" id="medicalHistory">
+                <button type="submit">Save Data</button>
+            </form>
+            <div id="patientInfo">
+                <h3>Stored Patient Data</h3>
+                <ul id="patientList"></ul>
+            </div>
+        </section>
+
+        <!-- Reminders Section -->
+        <section id="reminders">
+            <h2>Health Reminders</h2>
+            <form id="reminderForm">
+                <input type="text" placeholder="Enter Reminder" id="reminderText" required>
+                <input type="datetime-local" id="reminderTime" required>
+                <button type="submit">Set Reminder</button>
+            </form>
+            <div id="reminderList">
+                <h3>Upcoming Reminders</h3>
+                <ul id="reminderItems"></ul>
+            </div>
+        </section>
+
+        <!-- Medicines Section -->
+        <section id="medicines">
+            <h2>Medicines</h2>
+            <form id="medicineForm">
+                <input type="text" placeholder="Medicine Name" id="medicineName" required>
+                <input type="number" placeholder="Dosage" id="dosage" required>
+                <button type="submit">Add Medicine</button>
+            </form>
+            <div id="medicineList">
+                <h3>Your Medicines</h3>
+                <ul id="medicinesItems"></ul>
+            </div>
+        </section>
+
+        <!-- Communication Section -->
+        <section id="communication">
+            <h2>Doctor-Patient Communication</h2>
+            <textarea id="messageInput" placeholder="Message your doctor..."></textarea>
+            <button id="sendMessage">Send</button>
+            <div id="chatArea">
+                <h3>Chat</h3>
+                <ul id="chatMessages"></ul>
+            </div>
+        </section>
+
+        <!-- Virtual Assistant Section -->
+        <section id="virtualAssistant">
+            <h2>Virtual Health Assistant</h2>
+            <div>
+                <input type="text" id="assistantQuery" placeholder="Ask about your health..." />
+                <button id="askAssistant">Ask</button>
+            </div>
+            <div id="assistantResponse">
+                <p id="responseText">Ask me anything related to health!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HealthMonitor, All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
